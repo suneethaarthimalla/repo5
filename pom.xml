@@ -3,8 +3,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mycompany</groupId>
-	<artifactId>repo4</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<artifactId>project1234-suneetha</artifactId>
+	<version>1.0.0</version>
 	<packaging>mule-application</packaging>
 
 	<name>repo4</name>
