@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="4dbfa53b-eba1-4c2e-b75a-b13bb9c977c3" >
+		<http:listener-connection host="localhost" port="8081" readTimeout="3000000" />
+	</http:listener-config>
+	<flow name="repo4Flow" doc:id="75d0bdae-bcea-4c6a-a2fb-bd955f33e06c" >
+		<http:listener doc:name="Listener" doc:id="90f507a4-6770-4d7a-96b6-a985993c23a6" config-ref="HTTP_Listener_config" path="/repo4"/>
+		<set-payload value='#["working on git repositories"]' doc:name="Set Payload" doc:id="98c8ea2a-03ed-4af1-a200-d57a93d290d6" />
+	</flow>
+</mule>
